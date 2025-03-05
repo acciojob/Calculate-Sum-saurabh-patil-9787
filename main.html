@@ -13,10 +13,10 @@
     <input type="number" id="n2" value="44">
 
     <!-- Calculate button -->
-    <button id="sum_btn">Calculate</button>
+    <button id="sum_btn" onclick="calculateMysum()">Calculate</button>
 
     <!-- Paragraph to display the sum -->
-    <p id="Sum"></p>
+    <p id="Sum" ></p>
 
     <script>
         // JavaScript to handle sum calculation
@@ -26,7 +26,7 @@
         const displaySum = document.getElementById('Sum');
 
         // Event listener for the button click
-        CalculateBtn.addEventListener('click', calculateMysum);
+        // CalculateBtn.addEventListener('click', calculateMysum);
 
         function calculateMysum() {
             let num1 = parseInt(input1.value);
