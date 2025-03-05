@@ -1,9 +1,9 @@
 //your JS code here. If required.
- <script>
+ 
       const input1 = document.getElementById('n1')
       const input2 = document.getElementById('n2')
       const CalculateBtn = document.getElementById('sum_btn')
-      const displaySum = document.getElementById('sum')
+      const displaySum = document.getElementById('Sum')
 
       CalculateBtn.addEventListener('click',calculateMysum)
 
