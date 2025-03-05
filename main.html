@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sum Calculator</title>
 </head>
 <body>
-   <h1 id="heading">Hello, Welcome to JS</h1>
+    <h1 id="heading">Hello, Welcome to JS</h1>
+    
+    <!-- Input fields for numbers -->
     <input type="number" id="n1" value="122">
     <input type="number" id="n2" value="44">
+
+    <!-- Calculate button -->
     <button id="sum_btn">Calculate</button>
-    <p id="Sum">166</p>
-    
+
+    <!-- Paragraph to display the sum -->
+    <p id="Sum"></p>
+
+    <script>
+        // JavaScript to handle sum calculation
+        const input1 = document.getElementById('n1');
+        const input2 = document.getElementById('n2');
+        const CalculateBtn = document.getElementById('sum_btn');
+        const displaySum = document.getElementById('Sum');
+
+        // Event listener for the button click
+        CalculateBtn.addEventListener('click', calculateMysum);
+
+        function calculateMysum() {
+            let num1 = parseInt(input1.value);
+            let num2 = parseInt(input2.value);
+
+            // Check if both inputs are valid numbers
+            if (isNaN(num1) || isNaN(num2)) {
+                displaySum.innerText = "Please enter valid numbers!";
+            } else {
+                // Calculate and display the sum
+                displaySum.innerText = num1 + num2;
+            }
+        }
+    </script>
 </body>
 </html>
